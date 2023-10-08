@@ -1,0 +1,45 @@
+{% extends 'bitcourse/base.html' %}
+{% block title %}
+First Semester 
+{% endblock title %}
+{% block content %}
+<div>
+   <h1 class="my-5 ms-5">First Semester</h1>
+</div>
+
+<div class="row">
+   
+<div class="col-sm-3 text-center ms-5">  
+{% for notes in note %}
+
+
+<div class="alert alert-secondary">
+
+<a href="{% url 'see_pdf' notes.id %}" class="text-danger"> {{notes.title}}</a> 
+</div>
+
+
+
+{% endfor %}
+</div>
+
+
+
+
+<br>
+<br>
+<div class="col-sm-6 ms-5">
+<form action="" method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {% for form in fm %}
+{{form.label_tag}}
+{{form}} <br>
+<br>
+{% endfor %}
+<input type="submit" value="Post" class="btn btn-primary">
+
+</form>
+</div>
+
+</div>
+{% endblock content %}

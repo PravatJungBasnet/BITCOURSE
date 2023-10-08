@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <title> {% block title %}
+        {% endblock title %}
+
+     </title>
+     
+     <link rel="stylesheet" href="{% static 'bitcourse/css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+    {% include 'bitcourse/navbar.html' %}
+    </div>
+
+
+    {% block content %}
+    {% endblock content %}
+</div>
+<br>
+
+<hr>
+<br>
+
+<div class="footer  alert alert-danger container text-center ms-5">
+    <h2 class="">BIT Course Nepal</h3>
+    <p class="company-name ">BIT Course Nepal2023</p>
+
+
+
+    <p>Baundhara, Kathmandu</p>
+
+
+    <div> <a href="mailto:Pravatjungbasnet@gmail.com" class="link-danger">Pravatjungbasnet@gmail.com</a></div>
+    <br>
+    <br>
+    <div class="company-about">
+        <p>
+            
+        <span>About Us</span>
+        <p> BIT Course Nepal is the educational based website. The website provide TU information,Notes,Syllabus,course information .</p>
+        <br>
+        </p>
+        </div>
+
+</div>
+
+
+    
+</body>
+</html>

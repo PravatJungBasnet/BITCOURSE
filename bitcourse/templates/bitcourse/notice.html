@@ -1,0 +1,23 @@
+{% extends 'bitcourse/base.html' %}
+{% block title %}
+Notice 
+{% endblock title %}
+{% block content %}
+<h1 class="text-center my-4 alert alert-secondary"> Notice Page</h1>
+<div class="ms-5 jumbotron jumbotron-fluid jumbo-color ms-5">
+{% for noti in fm %}
+<h2 class="text-danger ml-5">
+    {{noti.title}}
+</h2>
+<img src="{{noti.image.url}}" alt="" height="1500" width="1300" class="img-fluid img-thumbnail">
+
+</div>
+    <br>
+ 
+
+
+
+
+{% endfor %}
+</div>
+{% endblock content %}
